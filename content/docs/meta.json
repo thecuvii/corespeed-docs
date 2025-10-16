@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "index",
+    "quick-started",
+    "---Overview---",
+    "...overview",
+    "---Guides---",
+    "...guides",
+    "---References---",
+    "...reference"
+  ],
+  "defaultOpen": true
+}
