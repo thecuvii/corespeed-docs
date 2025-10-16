@@ -5,6 +5,7 @@
 .contentlayer
 .content-collections
 .source
+.open-next
 
 # test & build
 /coverage
