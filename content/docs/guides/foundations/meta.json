@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "index",
+    "projects",
+    "services", 
+    "variables"
+  ],
+  "defaultOpen": true
+}
