@@ -1,13 +1,10 @@
 {
+  "title": "Documentation",
   "pages": [
-    "...(index)",
-    "quick-started",
-    "---Overview---",
-    "...overview",
-    "---Guides---",
-    "...guides",
-    "---References---",
-    "...reference"
-  ],
-  "defaultOpen": true
+    "index",
+    "quick-start",
+    "core-concepts",
+    "guides", 
+    "examples"
+  ]
 }
