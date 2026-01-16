@@ -1,7 +1,7 @@
-import Link from "next/link";
+import { CoreSpeedLogo } from "@/components/icons/corespeed";
 import { EditorMenuIcon } from "@/components/icons/editor-menu";
-import { ZypherIcon } from "@/components/icons/zypher";
 import { cn } from "@/lib/cn";
+import Link from "next/link";
 import { LargeSearchToggle, SearchToggle } from "../search-toggle";
 import { HeaderDropdown } from "./header-dropdown";
 
@@ -17,7 +17,7 @@ export function Header() {
       >
         <div className="desktop:mx-[122px] tablet:mx-20 mx-6 flex h-[88px] max-w-[1196px] items-center justify-between">
           <Link href="/">
-            <ZypherIcon className="w-[199px]" />
+            <CoreSpeedLogo className="w-[199px]" />
           </Link>
           <div className="flex h-full items-center">
             <div className="desktop:flex hidden h-full">
