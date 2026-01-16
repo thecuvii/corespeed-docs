@@ -1,6 +1,5 @@
 import { cn } from "@fumadocs/ui/cn";
 import Link from "fumadocs-core/link";
-import { ChevronRight } from "lucide-react";
 import type { HTMLAttributes, ReactNode } from "react";
 
 export function Cards(props: HTMLAttributes<HTMLDivElement>) {
