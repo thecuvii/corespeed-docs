@@ -6,29 +6,26 @@ import { useRender } from "@base-ui/react/use-render";
 interface HeadingProps extends useRender.ComponentProps<"h1"> {}
 
 export function Heading(props: HeadingProps) {
-  const { render, children, ...otherProps } = props;
+  const { render, children, id, ...otherProps } = props;
+
+  const headingContent = id ? (
+    <a href={`#${id}`} className="no-underline hover:underline">
+      {children}
+    </a>
+  ) : (
+    children
+  );
+
+  const defaultProps: useRender.ElementProps<"h1"> = {
+    className:
+      "text-text-high font-semibold tracking-tight font-mono leading-[140%]",
+    children: headingContent,
+  };
 
   const element = useRender({
     defaultTagName: "h1",
     render,
-    props: mergeProps(
-      {
-        className:
-          "text-text-high font-semibold tracking-tight font-mono leading-[140%]",
-        children: (
-          <>
-            {props.id ? (
-              <a href={`#${props.id}`} className="no-underline hover:underline">
-                {props.children}
-              </a>
-            ) : (
-              props.children
-            )}
-          </>
-        ),
-      },
-      otherProps,
-    ),
+    props: mergeProps<"h1">(defaultProps, otherProps),
   });
 
   return element;

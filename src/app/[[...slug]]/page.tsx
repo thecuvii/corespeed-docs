@@ -41,14 +41,12 @@ export default async function Page(props: PageProps<"/[[...slug]]">) {
 export async function generateStaticParams() {
   const params = source.generateParams();
   
-  // Ensure we include the root path for optional catch-all routes
-  const hasRootPath = params.some((p) => !p.slug || p.slug.length === 0);
+  // For optional catch-all routes with static export, we must include the root path
+  // Filter out any existing root paths to avoid duplicates
+  const filteredParams = params.filter((p) => p.slug && p.slug.length > 0);
   
-  if (!hasRootPath) {
-    return [{ slug: undefined }, ...params];
-  }
-  
-  return params;
+  // Return root path first, then all other paths
+  return [{ slug: [] }, ...filteredParams];
 }
 
 export async function generateMetadata(
