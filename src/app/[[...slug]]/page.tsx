@@ -12,8 +12,6 @@ import { source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
 import { A } from "@/modules/mdx-components/a";
 
-export const dynamic = 'force-static';
-
 export default async function Page(props: PageProps<"/[[...slug]]">) {
   const params = await props.params;
   const page = source.getPage(params.slug);

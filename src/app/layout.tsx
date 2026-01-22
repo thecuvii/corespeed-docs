@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/cn";
 import { source } from "@/lib/source";
 import { DocsLayout } from "@/components/layout/docs";
-import { SearchDialog } from "fumadocs-ui/components/dialog/search";
 import { DefaultSearchDialog } from "@/components/search";
 
 const inter = Inter({
